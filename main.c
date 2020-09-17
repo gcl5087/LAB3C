@@ -6,9 +6,8 @@
 // Breakout: 18
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <readline/readline.h> 
-
-
 
 int sum_n(n) {
   if (n == 0)
@@ -18,7 +17,7 @@ int sum_n(n) {
   
 }
 
-void print_n(const char s, int n) {
+void print_n(char s, int n) {
   if (n <= 0)
     {}
   else 
@@ -29,9 +28,7 @@ void print_n(const char s, int n) {
 int main(void) {
   char *getN = readline("Enter an int: ");
   int intN = atoi(getN);
-
-  printf("sum is %i\n", sum_n(intN)); 
-
-  char *getS = readline("Enter a string: ");
-  print_n(*getS, intN);
+  printf("sum is %d.\n", sum_n(intN));
+  char *s = readline("Enter a string: ");
+  print_n(s, intN);
 }
