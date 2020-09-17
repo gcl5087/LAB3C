@@ -13,8 +13,8 @@ int main(void) {
   int intN = atoi(getN);
   printf("sum is %i\n", sum_n(intN)); 
 
-  getS = readline("Enter a string: ")
-  print_n(getS, intN)
+  char *getS = readline("Enter a string: ");
+  print_n(getS, intN);
 }
 
 int sum_n(n) {
@@ -25,10 +25,10 @@ int sum_n(n) {
   
 }
 
-char print_n(s, n) {
-  if n <= 0:
-    pass
-  else:
-    print(f"{s}")
-    print_n(s,n-1)
+void print_n(const char s, int n) {
+  if (n <= 0)
+    pass;
+  else
+    printf("%s",s);
+    print_n(s,n-1);
 }
